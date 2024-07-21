@@ -108,7 +108,7 @@ export const AboutUs = () => {
 
   return (
     <section className="about">
-      <div className="head-title">
+      <div className="head-title text-center">
         <h1>About Us</h1>
       </div>
       <div className="js-timeline ag-timeline">
