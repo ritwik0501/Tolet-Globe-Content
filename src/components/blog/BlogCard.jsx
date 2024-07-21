@@ -102,7 +102,7 @@ const BlogCard = ({
   };
 
   return (
-    <div className="card" style={{ width: "30%", height: "65vh" }}>
+    <div id="blogcard" className="card" style={{ width: "30%", height: "65vh" }}>
       <img
         src={image}
         className="card-img-top"
