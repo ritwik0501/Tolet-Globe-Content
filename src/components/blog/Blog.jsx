@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import DateCategory from "./DateCategory";
@@ -18,7 +19,6 @@ function Blog() {
   const [backendData, setBackendData] = useState([{}]);
   const { updateLikes, setUpdateLikes } = useContext(MyContext);
 
-  const [] = useState();
 
   useEffect(() => {
     async function getDataFromBackend() {

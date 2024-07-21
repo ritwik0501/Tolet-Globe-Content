@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React,{useEffect,useState} from 'react'
 import '../style/Showblog.css'
 import img1 from '../assets/image/blog/blog1/image1.png';
@@ -39,7 +40,7 @@ export default function Showblog() {
       <p>By {targetBlog.author}</p>
       
       <div className='showblogcontent'>
-      <img src={targetBlog.img} className="showblogimage" style={{width:'80%',paddingBottom:'2%',marginLeft:'10%'}}></img>
+      <img alt='img1' src={targetBlog.img} className="showblogimage" style={{width:'80%',paddingBottom:'2%',marginLeft:'10%'}}></img>
       <div
   dangerouslySetInnerHTML={{
     __html: DOMPurify.sanitize(targetBlog.content?.replace(/^"|"$/g, '').replace(/--/g, '-')),

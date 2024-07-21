@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Card, CardBody,Form, Input,Label,Container,Button} from "reactstrap"
 import JoditEditor from "jodit-react";
 import { useRef, useState } from "react";

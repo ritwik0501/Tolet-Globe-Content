@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-unreachable */
 /* eslint-disable no-lone-blocks */
 import "../../style/blog/blogmain.css";
