@@ -170,7 +170,7 @@ button, a { transition: var(--transition); }
 
 .h3 > a { color: inherit; }
 
-.btn {
+/* .btn {
   position: relative;
   background: #C8A217;
   color: var(--white);
@@ -200,7 +200,7 @@ button, a { transition: var(--transition); }
   z-index: -1;
 }
 
-.btn:is(:hover, :focus)::before { width: 100%; }
+.btn:is(:hover, :focus)::before { width: 100%; } */
 
 .w-100 { width: 100%; }
 
