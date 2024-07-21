@@ -1,0 +1,52 @@
+
+.Testimonial-Container {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  margin-top: 8%;
+  margin-bottom: 5%;
+}
+.Testimonial-Container h2{
+  text-align: center;
+  margin-left: 5rem;
+  color: #1D5F58 !important;
+  
+}
+.Testimonial-Container h1 {
+  display: flex;
+  justify-content: last baseline;
+  text-align: left;
+}
+.testimonial-container {
+  display: flex;
+  justify-content: justify-between;
+  flex-direction: row;
+  align-items: center; /* Centers the rows vertically within the container */
+  margin-top: 17%;
+  margin-left: 4%;
+}
+.testimonialSlider{
+ 
+  justify-content: space-between;
+  margin-left: 35vw;
+  margin-top: -10vw;
+  
+}
+.card img{
+  width: 30vw;
+  padding:10px 10px 10px 10px;
+}
+.card h1{
+  font-size: 2vw;
+  color: black !important;
+  padding-top: 10px;
+  margin-right: 19vw;
+  
+}
+
+
+  
+  
+
+

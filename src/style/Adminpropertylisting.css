@@ -1,0 +1,136 @@
+/* .Adminpropdiv1 {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .form-card {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-content {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-button {
+    width: 120px;
+    margin: 0 10px;
+  }
+  
+  .text-center {
+    margin-top: 20px;
+  }
+   */
+   .Adminpropdiv1 {
+   
+    background-color: black;
+    width:100vw;
+    height:100vh;
+  }
+  
+  .form-card {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1d;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f7b731;
+    font-weight: bold;
+  }
+  
+  .form-content {
+    background-color: #2f3640;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #f7b731 !important;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+  }
+  
+  .form-input::placeholder {
+    color: #888;
+  }
+  
+  .form-button {
+    width: 180px;
+    margin: 0 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    display: inline;
+    
+  }
+  
+  .form-button.bg-success {
+    background-color: #28a745;
+  }
+  
+  .form-button.bg-success:hover {
+    background-color: #218838;
+  }
+  
+  .form-button.bg-danger {
+    background-color: #dc3545;
+  }
+  
+  .form-button.bg-danger:hover {
+    background-color: #c82333;
+  }
+  
+  .text-center {
+    margin-top: 20px;
+    align-items: center;
+  }
+  

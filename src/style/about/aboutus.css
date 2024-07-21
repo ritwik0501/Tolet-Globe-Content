@@ -1,0 +1,127 @@
+.AboutUS-Container {
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    margin-top: 12%;
+    margin-bottom: 5%;
+}
+
+.AboutUS-Container h1 {
+    display: flex;
+    justify-content: last baseline;
+    text-align: left;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the rows vertically within the container */
+}
+
+.about-container h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: yellow;
+    text-align: left;
+}
+
+.heading-color{
+    color: #f6ce3c !important;
+}
+
+.about-container p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    line-height: 24px;
+    text-align: left;
+   /* margin-left: 20px;*/
+}
+
+.about-container img {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+}
+
+
+.mi{
+
+    margin-left:16.6%;
+}
+.about-container .vision-heading {
+    color: #f6ce3c;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align: left;
+}
+
+.rows-center{
+    align-items: center; 
+    justify-content: center;
+    margin: -5%;
+    margin-top: 120px !important;
+
+}
+/* mobile view */
+
+@media only screen and (max-width: 768px) {
+    .rows-center{
+        align-items: center; 
+        justify-content: center;
+        margin: -5%;
+        margin-top: 70px !important;
+    
+    }
+    .midc{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+ .midc>.mcol1{
+
+ }
+
+       
+ 
+   
+
+.about-container p{
+    font-size: 18px;
+    overflow:auto;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    line-height: 24px;
+   text-align: center;
+}
+
+.about-container h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: yellow;
+    text-align: center;
+}
+.about-container .vision-heading {
+    color: #f6ce3c;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align:center;
+}
+.heading-color{
+    color: #f6ce3c !important;
+
+    text-align: center;
+  
+}
+.mi{
+
+    margin-left:0;
+}
+}

@@ -1,0 +1,13 @@
+#date {
+  border-right: 2px solid #9da2af;
+  padding-right: 06px;
+  color: #9da2af;
+  display: inline;
+}
+
+#category {
+  padding-left: 10px;
+  color: #9da2af !important;
+  display: inline;
+  text-decoration: underline;
+}

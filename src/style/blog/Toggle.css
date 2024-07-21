@@ -1,0 +1,54 @@
+.main-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+  border-radius: 50px;
+}
+#togglecontainer1 {
+  width: 260px;
+  height: 80px;
+  background-color: #171717;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#togglecontainer2 {
+  width: 300px;
+  height: 80px;
+  border-radius: 10%;
+}
+
+#createBlog {
+  color: white;
+  padding: 10px 23px;
+  margin-left: 140px;
+  border: 1px solid white;
+}
+
+#createBlog:hover {
+  border: 1px solid #5aa79f;
+}
+
+#createBlog:hover {
+  background-color: Black;
+  color: #5aa79f;
+  cursor: pointer;
+}
+
+#togglecontainer1 .btn.custom {
+  color: white;
+  padding: 10px 23px;
+}
+#togglecontainer1 .btn.custom:hover {
+  background-color: Black;
+  color: #5aa79f;
+  cursor: pointer;
+}
+
+#togglecontainer2 {
+  margin-left: 10px;
+}
