@@ -4,6 +4,7 @@
 
 #categoryCard {
   margin: 10px calc(25% / 6);
+  background-color:black;
 
   border: none;
 }
