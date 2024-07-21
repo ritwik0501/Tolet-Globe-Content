@@ -144,9 +144,32 @@ h6{
     animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
   }
   
-.btn{
+#homeButton {
   border-radius: 0 5px 5px 0 !important;
   background-color: #039b73 !important;
+}
+
+
+#homeButton:is(:hover, :focus) {
+  background: var(--black);
+  color: #6cc0c4;
+  border-color: var(--black);
+}
+
+#homeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--white);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+#homeButton:is(:hover, :focus)::before {
+  width: 100%;
 }
 
   /* --------------Animation---------------- */
