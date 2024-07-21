@@ -5,8 +5,8 @@ import "../../style/blog/AuthorDetails.css";
 // Component to Display Author Details like Username, Role, and User Img Icon
 function AuthorDetails({ author, role }) {
   return (
-    <div className="author-detail">
-      <div className="row d-flex">
+    <div className="author-detail d-flex">
+     
         <div className="col-2 mr-4 p-0 pt-1">
           <img className="rounded-circle" src={avatar} width="30px" alt="..." />
         </div>
@@ -19,7 +19,7 @@ function AuthorDetails({ author, role }) {
           </div>
         </div>
       </div>
-    </div>
+
   );
 }
 
