@@ -23,7 +23,7 @@ export const HomeDown = () => {
                   placeholder="Search PG, Flats and Houses"
                   aria-label="Search PG, Flats and Houses"
                 />
-                <Button className='btn' onClick={() => console.log("connect")}>
+                <Button id="homeButton" className='btn' onClick={() => console.log("connect")}>
                   Search
                 </Button>
               </InputGroup>
