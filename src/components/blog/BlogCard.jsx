@@ -145,23 +145,21 @@ const BlogCard = ({
             </a>
           </div>
 
-          <div className="container-fluid m-3">
-            <div className="row d-flex">
-              <div className="col-7 pr-0">
-                <AuthorDetails author={author} role={role} />
+          <div className="row">
+            <div className="col-7 pr-0 pl-0">
+              <AuthorDetails author={author} role={role} />
+            </div>
+            <div className="col-4 p-0 d-flex">
+              <div id="viewsdiv" className="col-6 p-0 d-flex">
+                <Views views={views} />
               </div>
-              <div className="col-4 p-0 d-flex">
-                <div id="viewsdiv" className="col-6 p-0 d-flex">
-                  <Views views={views} />
-                </div>
-                <div className="col-5 p-0 d-flex">
-                  <Likes
-                    isLiked={isLiked}
-                    // updateLikes={updateLikes}
-                    likes={likes}
-                    handleLikes={handleLikes}
-                  />
-                </div>
+              <div className="col-5 p-0 d-flex">
+                <Likes
+                  isLiked={isLiked}
+                  // updateLikes={updateLikes}
+                  likes={likes}
+                  handleLikes={handleLikes}
+                />
               </div>
             </div>
           </div>
