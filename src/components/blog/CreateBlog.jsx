@@ -83,7 +83,7 @@ function CreateBlog() {
 
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="container">
         <div className="row">
           <h3 className="text-center createBlog pt-5 pb-1">Create Blog</h3>
