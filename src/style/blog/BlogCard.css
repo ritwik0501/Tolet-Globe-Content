@@ -1,11 +1,11 @@
-.card {
+#blogcard {
   color: white;
   background-color: black !important;
   border-bottom: 5px solid #2a2a2a;
   margin: calc(10% / 6);
 }
 
-.card:hover {
+#blogcard:hover {
   border-bottom: 5px solid #5aa79f;
 }
 
