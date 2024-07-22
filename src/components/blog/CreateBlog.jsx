@@ -5,7 +5,7 @@ import axios from "./axiosConfig";
 import "../../style/blog/CreateBlog.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import {NavBar} from "../NavBar";
+
 
 // Component to Display Create Blog Form
 
@@ -83,7 +83,7 @@ function CreateBlog() {
 
   return (
     <>
-      {/* <NavBar /> */}
+    
       <div className="container">
         <div className="row">
           <h3 className="text-center createBlog pt-5 pb-1">Create Blog</h3>
