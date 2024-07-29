@@ -46,7 +46,7 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
           </div>
         </div>
       </div>
-      {/* <div className="col" id="togglecontainer2">
+      <div className="col" id="togglecontainer2">
         <a
           type="button"
           className="btn custom btn-lg"
@@ -55,7 +55,7 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
         >
           Create Blog
         </a>
-      </div> */}
+      </div>
     </div>
   );
 }
