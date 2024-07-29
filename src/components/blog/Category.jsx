@@ -6,7 +6,7 @@ import "../../style/blog/Category.css";
 // Component to Display Category Card
 const Category = ({ title, imgurl }) => {
   return (
-    <div id="categoryCard" className="card" style={{ width: "25%" }}>
+    <div id="categoryCard" className="card" style={{ width: "27%" }}>
       <img src={imgurl} id="categoryimg" className="card-img-top" alt="..." />
       <div className="card-body">
         <p className="card-text d-flex">

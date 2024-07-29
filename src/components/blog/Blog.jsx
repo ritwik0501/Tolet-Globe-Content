@@ -19,15 +19,14 @@ function Blog() {
   const [backendData, setBackendData] = useState([{}]);
   const { updateLikes, setUpdateLikes } = useContext(MyContext);
 
-
   useEffect(() => {
     async function getDataFromBackend() {
       const blog = await axios.get(`/blogs/${id}`);
+      console.log(blog.data);
       setBackendData(blog.data);
     }
     getDataFromBackend();
   }, [updateLikes]);
-
 
   const handleLikeClick = async () => {
     if (updateLikes === false) {
@@ -120,7 +119,12 @@ function Blog() {
         </div>
 
         <div className="row">
-          <img alt="image1" className="img-fluid" src={backendData.image} height="70vh" />
+          <img
+            alt="image1"
+            className="img-fluid"
+            src={backendData.image}
+            height="70vh"
+          />
         </div>
 
         <div

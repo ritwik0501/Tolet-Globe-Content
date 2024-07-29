@@ -2,8 +2,14 @@
   background-color: black;
   border: 1px solid #5aa79f;
   color: white;
+  font-size: 15px;
+}
 
-  /* border-bottom: white; */
+.custom-input:focus {
+  background-color: black;
+  border: 1px solid #5aa79f;
+  color: white;
+  font-size: 15px;
 }
 
 .custom-input::placeholder {
@@ -17,14 +23,33 @@
   font-weight: 700;
 }
 
-.custom-form {
+/* .custom-form {
   color: white;
-}
+} */
 
 .custom-label {
   font-size: 20px;
+  color: white;
 }
 
 .form-control:focus {
   background-color: black;
+}
+
+#content .ql-toolbar.ql-snow {
+  border: 1px solid #5aa79f;
+}
+
+#content .ql-container.ql-snow {
+  border: 1px solid #5aa79f;
+}
+
+#blog-role {
+  color: grey;
+  font-size: 15px;
+}
+
+#blog-category {
+  color: grey;
+  font-size: 15px;
 }

@@ -6,7 +6,6 @@ import "../../style/blog/CreateBlog.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-
 // Component to Display Create Blog Form
 
 function CreateBlog() {
@@ -14,8 +13,10 @@ function CreateBlog() {
   const fileInputRef = useRef(null);
 
   const [formData, setFormData] = useState({
+    author: "",
+    role: "Content Creator",
     title: "",
-    category: "",
+    category: "News & Events",
     intro: "",
     image: "",
     content: "",
@@ -23,8 +24,10 @@ function CreateBlog() {
 
   const handleReset = () => {
     setFormData({
+      author: "",
+      role: "Content Creator",
       title: "",
-      category: "",
+      category: "News & Events",
       intro: "",
       image: null,
       content: "",
@@ -53,19 +56,19 @@ function CreateBlog() {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault(); // Prevent the default form submission
-    const response = await axios.post("/getUserData");
+    // const response = await axios.post("/getUserData");
 
-    let { username, role } = response.data;
-    if (role === "content-creator") {
-      role = "Content Creator";
-    } else if (role === "admin") {
-      role = "Admin";
-    }
+    // let { username, role } = response.data;
+    // if (role === "content-creator") {
+    //   role = "Content Creator";
+    // } else if (role === "admin") {
+    //   role = "Admin";
+    // }
 
     const dataToDB = {
       ...formData,
-      author: username,
-      role: role,
+      // author: username,
+      // role: role,
       views: 0,
       likes: 0,
       date: new Date(),
@@ -83,7 +86,6 @@ function CreateBlog() {
 
   return (
     <>
-    
       <div className="container">
         <div className="row">
           <h3 className="text-center createBlog pt-5 pb-1">Create Blog</h3>
@@ -94,6 +96,37 @@ function CreateBlog() {
               onSubmit={handleSubmit}
               encType="multipart/form-data"
             >
+              <div className="form-group my-3">
+                <label htmlFor="blog-author" className="custom-label mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control custom-input"
+                  id="blog-author"
+                  placeholder="Enter your name!"
+                  value={formData.author}
+                  name="author"
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="form-group my-3">
+                <label htmlFor="blog-role" className="custom-label my-2">
+                  Role
+                </label>
+                <select
+                  className="form-control custom-input"
+                  id="blog-role"
+                  value={formData.role}
+                  name="role"
+                  onChange={handleChange}
+                >
+                  <option value="Content Creator">Content Creater</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+
               <div className="form-group my-3">
                 <label htmlFor="title" className="custom-label mb-2">
                   Title
@@ -110,33 +143,37 @@ function CreateBlog() {
               </div>
 
               <div className="form-group my-3">
-                <label htmlFor="category" className="custom-label my-2">
+                <label htmlFor="blog-category" className="custom-label my-2">
                   Category
                 </label>
                 <select
                   className="form-control custom-input"
-                  id="category"
+                  id="blog-category"
                   value={formData.category}
                   name="category"
                   onChange={handleChange}
                 >
-                  <option>News & Events</option>
-                  <option>Feature Updates</option>
-                  <option>Brand Collaboration</option>
-                  <option>Life at To-Let</option>
-                  <option>Internship Campaigns</option>
-                  <option>Giveaway & Offers</option>
+                  <option value="News & Events">News & Events</option>
+                  <option value="Feature Updates">Feature Updates</option>
+                  <option value="Brand Collaboration">
+                    Brand Collaboration
+                  </option>
+                  <option value="Life at To-Let">Life at To-Let</option>
+                  <option value="Internship Campaigns">
+                    Internship Campaigns
+                  </option>
+                  <option value="Giveaway & Offers">Giveaway & Offers</option>
                 </select>
               </div>
 
               <div className="form-group my-3">
-                <label htmlFor="intro" className="custom-label my-2">
+                <label htmlFor="blog-intro" className="custom-label my-2">
                   Intro
                 </label>
                 <input
                   type="text"
                   className="form-control custom-input"
-                  id="intro"
+                  id="blog-intro"
                   placeholder="Brief Introduction!"
                   value={formData.intro}
                   name="intro"
@@ -145,30 +182,34 @@ function CreateBlog() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="image" className="custom-label my-2 d-block">
+                <label
+                  htmlFor="image"
+                  // id="file-label"
+                  className="custom-label my-2 d-block"
+                >
                   Upload Image
                 </label>
                 <input
                   type="file"
-                  className="form-control-file custom-input"
+                  className="form-control custom-input"
+                  // className="form-control"
                   id="image"
-                  // value={}
                   name="image"
                   ref={fileInputRef}
                   onChange={handleFileChange}
-                  // value={}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="content" className="custom-label my-3">
+                <label htmlFor="blog-content" className="custom-label my-3">
                   Content
                 </label>
                 <ReactQuill
                   //   onChange={handleChange}
+                  className="custom-quill-editor custom-input"
                   modules={CreateBlog.modules}
                   formats={CreateBlog.formats}
-                  id="content"
+                  id="blog-content"
                   value={formData.content}
                   name="content"
                   onChange={handleContentChange}

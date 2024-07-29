@@ -71,7 +71,7 @@ function BlogContainer() {
         handleClickTrending={handleClickTrending}
       />
 
-      <div className="container BlogContainer">
+      <div className="container-fluid BlogContainer">
         {sixBlogData.map((datapt, i) => (
           <BlogCard
             key={i}
@@ -91,14 +91,12 @@ function BlogContainer() {
           />
         ))}
       </div>
-      <div 
-      style={{marginTop:"20px"}}>
-
-      <Pagination
-        noOfBlogs={backendData.length}
-        paginate={paginate}
-        currentPg={currentPg}
-      />
+      <div style={{ marginTop: "20px" }}>
+        <Pagination
+          noOfBlogs={backendData.length}
+          paginate={paginate}
+          currentPg={currentPg}
+        />
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 .CategoryContainer {
   display: flex;
   flex-wrap: wrap;
+  max-width: 84%;
 }
 
 .shift-right {
