@@ -1,15 +1,18 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "./axiosConfig";
 import "../../style/blog/CreateBlog.css";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import JoditEditor from "jodit-react";
 
 // Component to Display Create Blog Form
 
 function CreateBlog() {
   const navigate = useNavigate();
+
+  const editor = useRef(null);
+
   const fileInputRef = useRef(null);
 
   const [formData, setFormData] = useState({
@@ -192,7 +195,6 @@ function CreateBlog() {
                 <input
                   type="file"
                   className="form-control custom-input"
-                  // className="form-control"
                   id="image"
                   name="image"
                   ref={fileInputRef}
@@ -204,15 +206,13 @@ function CreateBlog() {
                 <label htmlFor="blog-content" className="custom-label my-3">
                   Content
                 </label>
-                <ReactQuill
-                  //   onChange={handleChange}
-                  className="custom-quill-editor custom-input"
-                  modules={CreateBlog.modules}
-                  formats={CreateBlog.formats}
-                  id="blog-content"
+
+                <JoditEditor
+                  ref={editor}
                   value={formData.content}
                   name="content"
                   onChange={handleContentChange}
+                  id="blog-content"
                 />
               </div>
 
@@ -235,38 +235,5 @@ function CreateBlog() {
     </>
   );
 }
-
-CreateBlog.modules = {
-  toolbar: [
-    [{ header: "1" }, { header: "2" }, { font: [] }],
-    [{ size: [] }],
-    [("bold", "italic", "underline", "strike", "blockquote")],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["link", "image", "video"],
-    ["clean"],
-  ],
-};
-
-CreateBlog.formats = [
-  "header",
-  "font",
-  "size",
-  "bold",
-  "italic",
-  "underline",
-  "strike",
-  "blockquote",
-  "list",
-  "bullet",
-  "indent",
-  "link",
-  "image",
-  "video",
-];
 
 export default CreateBlog;
