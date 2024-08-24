@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import DateCategory from "./DateCategory";
@@ -9,20 +8,23 @@ import "../../style/blog/Blog.css";
 // import axios from "axios";
 // require("dotenv").config({ path: ".env" });
 import axios from "./axiosConfig";
-// import {NavBar} from "../NavBar";
+import { NavBar } from "../NavBar";
+
 import MyContext from "../../context";
 
 // Component to Display a Single Blog
 function Blog() {
-  const { id } = useParams();
+  // const { id } = useParams();
+  const { slug } = useParams();
 
   const [backendData, setBackendData] = useState([{}]);
   const { updateLikes, setUpdateLikes } = useContext(MyContext);
 
   useEffect(() => {
     async function getDataFromBackend() {
-      const blog = await axios.get(`/blogs/${id}`);
-      console.log(blog.data);
+      // const blog = await axios.get(`/blogs/${id}`);
+      const blog = await axios.get(`/blogs/${slug}`);
+
       setBackendData(blog.data);
     }
     getDataFromBackend();
@@ -42,7 +44,9 @@ function Blog() {
         likes: backendData.likes + 1,
         date: backendData.date,
         intro: backendData.intro,
+        slug: backendData.slug,
       };
+      const id = backendData.id;
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
         .then((response) => {
@@ -64,7 +68,10 @@ function Blog() {
         likes: backendData.likes - 1,
         date: backendData.date,
         intro: backendData.intro,
+        slug: backendData.slug,
       };
+      const id = backendData.id;
+
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
         .then((response) => {
@@ -109,7 +116,7 @@ function Blog() {
           </div>
           <div className="col-2">
             <span className="text-decoration-underline text-right" id="read">
-              6 min ago
+              6 min read
             </span>
           </div>
         </div>

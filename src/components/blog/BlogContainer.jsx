@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React, { useState, useEffect, useContext } from "react";
 import "../../style/blog/BlogContanier.css";
 // import BlogCard from "./BlogCard";
@@ -71,7 +70,7 @@ function BlogContainer() {
         handleClickTrending={handleClickTrending}
       />
 
-      <div className="container-fluid BlogContainer">
+      <div className="container BlogContainer">
         {sixBlogData.map((datapt, i) => (
           <BlogCard
             key={i}
@@ -88,6 +87,7 @@ function BlogContainer() {
             intro={datapt.intro}
             updateLikes={updateLikes}
             setUpdateLikes={setUpdateLikes}
+            slug={datapt.slug}
           />
         ))}
       </div>

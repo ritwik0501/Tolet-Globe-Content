@@ -25,6 +25,7 @@ const BlogCard = ({
   intro,
   updateLikes,
   setUpdateLikes,
+  slug,
 }) => {
   const navigate = useNavigate();
 
@@ -44,6 +45,7 @@ const BlogCard = ({
         likes: likes + 1,
         date: date,
         intro: intro,
+        slug: slug,
       };
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
@@ -67,6 +69,7 @@ const BlogCard = ({
         likes: likes - 1,
         date: date,
         intro: intro,
+        slug: slug,
       };
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
@@ -93,16 +96,18 @@ const BlogCard = ({
       likes: likes,
       date: date,
       intro: intro,
+      slug: slug,
     };
 
-    const resp = await axios.post(`blogs/updateViews/${id}`,
+    const resp = await axios.post(
+      process.env.REACT_APP_API_URL + `blogs/updateViews/${id}`,
       dataToDB
     );
-    navigate(`/showBlog/${id}`);
+    navigate(`/showBlog/${slug}`);
   };
 
   return (
-    <div id="blogcard" className="card" style={{ width: "30%", height: "65vh" }}>
+    <div className="card" style={{ width: "30%", height: "80vh" }}>
       <img
         src={image}
         className="card-img-top"
@@ -145,21 +150,23 @@ const BlogCard = ({
             </a>
           </div>
 
-          <div className="row">
-            <div className="col-7 pr-0 pl-0">
-              <AuthorDetails author={author} role={role} />
-            </div>
-            <div className="col-4 p-0 d-flex">
-              <div id="viewsdiv" className="col-6 p-0 d-flex">
-                <Views views={views} />
+          <div className="container-fluid m-3">
+            <div className="row d-flex">
+              <div className="col-7 pr-0">
+                <AuthorDetails author={author} role={role} />
               </div>
-              <div className="col-5 p-0 d-flex">
-                <Likes
-                  isLiked={isLiked}
-                  // updateLikes={updateLikes}
-                  likes={likes}
-                  handleLikes={handleLikes}
-                />
+              <div className="col-4 p-0 d-flex">
+                <div id="viewsdiv" className="col-6 p-0 d-flex">
+                  <Views views={views} />
+                </div>
+                <div className="col-5 p-0 d-flex">
+                  <Likes
+                    isLiked={isLiked}
+                    // updateLikes={updateLikes}
+                    likes={likes}
+                    handleLikes={handleLikes}
+                  />
+                </div>
               </div>
             </div>
           </div>
