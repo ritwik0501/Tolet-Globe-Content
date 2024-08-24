@@ -100,7 +100,7 @@ const BlogCard = ({
     };
 
     const resp = await axios.post(
-      process.env.REACT_APP_API_URL + `blogs/updateViews/${id}`,
+      process.env.REACT_APP_API_URL + `/blogs/updateViews/${id}`,
       dataToDB
     );
     navigate(`/showBlog/${slug}`);
