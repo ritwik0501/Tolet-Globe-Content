@@ -29,7 +29,6 @@ function Blog() {
     }
     getDataFromBackend();
   }, [updateLikes]);
-
   const handleLikeClick = async () => {
     if (updateLikes === false) {
       const dataToDB = {
@@ -45,6 +44,7 @@ function Blog() {
         date: backendData.date,
         intro: backendData.intro,
         slug: backendData.slug,
+        readingTime:backendData.readingTime,
       };
       const id = backendData.id;
       await axios
@@ -69,6 +69,7 @@ function Blog() {
         date: backendData.date,
         intro: backendData.intro,
         slug: backendData.slug,
+        readingTime:backendData.readingTime,
       };
       const id = backendData.id;
 
@@ -116,7 +117,7 @@ function Blog() {
           </div>
           <div className="col-2">
             <span className="text-decoration-underline text-right" id="read">
-              6 min read
+            {backendData.readingTime}
             </span>
           </div>
         </div>
