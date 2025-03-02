@@ -29,7 +29,6 @@ function Blog() {
     }
     getDataFromBackend();
   }, [updateLikes]);
- console.log(backendData);
   const handleLikeClick = async () => {
     if (updateLikes === false) {
       const dataToDB = {
