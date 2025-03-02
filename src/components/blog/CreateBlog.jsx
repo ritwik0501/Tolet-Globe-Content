@@ -24,6 +24,7 @@ function CreateBlog() {
     intro: "",
     image: "",
     content: "",
+    readingTime:"6min",
   });
 
   const handleReset = () => {
@@ -35,6 +36,7 @@ function CreateBlog() {
       intro: "",
       image: null,
       content: "",
+      readingTime:"",
     });
     fileInputRef.current.value = "";
   };
@@ -209,6 +211,20 @@ function CreateBlog() {
                   name="image"
                   ref={fileInputRef}
                   onChange={handleFileChange}
+                />
+              </div>
+              <div className="form-group my-3">
+                <label htmlFor="readingTime" className="custom-label mb-2">
+                  Reading Time
+                </label>
+                <input
+                  type="text"
+                  className="form-control custom-input"
+                  id="readingTime"
+                  placeholder="Reading Time in minutes"
+                  value={formData.readingTime}
+                  name="readingTime"
+                  onChange={handleChange}
                 />
               </div>
 
